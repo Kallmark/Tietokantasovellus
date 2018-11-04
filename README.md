@@ -6,12 +6,12 @@ Sovelluksessa on määrä olla admin-käyttäjä, joka pystyy tarkastelemaan kä
 
 Alustavia toimintoja:
 
-Kirjautuminen
-Juomien haku
-Juomien selailu
-Juoman merkitseminen käyttäjälle
-Juoman lisääminen tietokantaan
-Juomien sisäänluku tiedostosta
-Käyttäjätunnuksen luominen
-Käyttäjätietojen muutos ja tilin poisto
+- Kirjautuminen
+- Juomien haku
+- Juomien selailu
+- Juoman merkitseminen käyttäjälle
+- Juoman lisääminen tietokantaan
+- Juomien sisäänluku tiedostosta
+- Käyttäjätunnuksen luominen
+- Käyttäjätietojen muutos ja tilin poisto
 
