@@ -15,3 +15,12 @@ Alustavia toimintoja:
 - Käyttäjätunnuksen luominen
 - Käyttäjätietojen muutos ja tilin poisto
 
+## Tietokanta
+
+
+
+## Linkkejä
+
+Linkki Herokussa olevaan sovellukseen: https://tietokantasovellus-python.herokuapp.com/
+
+
