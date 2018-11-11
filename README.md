@@ -17,7 +17,15 @@ Alustavia toimintoja:
 - Käyttäjätunnuksen luominen
 - Käyttäjätietojen muutos ja tilin poisto
 
-## Linkkejä
+## Dokumentaatiota
+
+[Työaikakirjanpito](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/ty%C3%B6aikakirjanpito.md)
+
+[Arkkitehtuurkuvaus(tietokanta)](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/arkkitehtuurikuvaus.md)
+
+[Käyttötapauksia / user stories](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/stories.md)
+
+## Muita linkkejä
 
 Linkki Herokussa olevaan sovellukseen: https://tietokantasovellus-python.herokuapp.com/
 
