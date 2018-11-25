@@ -10,7 +10,7 @@ class Product(db.Model):
     price = db.Column(db.Integer)
     amount = db.Column(db.Integer)
 
-    def __init__(self, name):
+    def __init__(self, name, price, amount):
         self.name = name
-        self.price = 0
-        self.amount = 0
+        self.price = price
+        self.amount = amount

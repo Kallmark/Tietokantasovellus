@@ -4,15 +4,12 @@
   <table>
     <tr>
       <th>Product</th>
-      <th></th>
     </tr>
-    {% for product in Products %}
+    {% for product in products %}
     <tr>
       <td>{{ product.name }}</td>
       <td>{{ product.price }}</td>
       <td>{{ product.amount }}</td>
-      <td>
-      </td>
     </tr>
     {% endfor %}
   </table>
