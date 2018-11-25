@@ -16,6 +16,9 @@ def products_form():
 def products_create():
     form = ProductForm(request.form)
 
+    if not form.validate():
+        return render_template("products/new.html", form = form)
+
     t = Product(name = form.name.data, amount = form.amount.data, price =  form.price.data)
 
     db.session().add(t)
