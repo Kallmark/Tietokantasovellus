@@ -27,9 +27,9 @@
 	 Jokaista taulukon solua luodessa oletetaan, että 
 	 esine on olio, ja että alkiolla on muuttuja name. 
 	 Muuttujan arvo asetetaan solun arvoksi. -->
-    {% for esine in esineet %}
+    {% for product in products %}
     <tr>
-      <td>{{ esine.name }}</td>
+      <td>{{ product.name }}</td>
     </tr>
     {% endfor %}
   </table>
