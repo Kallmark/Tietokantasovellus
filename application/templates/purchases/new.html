@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+<form method="POST" action="{{ url_for('purchases_create') }}">
+    <table>
+    <select name="purchase" method="GET" action="/">
+        {% for product in products %}
+            <option value="{{product}}" SELECTED>{{product}}</option>"
+        {% endfor %}
+    </select>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Purchase a product"/>
+      </td>
+    </tr>
+</form>
+{% endblock %}

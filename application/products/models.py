@@ -9,6 +9,8 @@ class Product(db.Model):
     name = db.Column(db.String(144), nullable=False)
     price = db.Column(db.Integer)
     amount = db.Column(db.Integer)
+    
+    purchases = db.relationship("Purchase", backref='product', lazy=True)
 
     def __init__(self, name, price, amount):
         self.name = name
