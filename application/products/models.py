@@ -7,7 +7,7 @@ class Product(db.Model):
     onupdate=db.func.current_timestamp())
 
     name = db.Column(db.String(144), nullable=False)
-    price = db.Column(db.Integer)
+    price = db.Column(db.Float)
     amount = db.Column(db.Integer)
     
     purchases = db.relationship("Purchase", backref='product', lazy=True)

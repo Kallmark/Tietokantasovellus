@@ -12,7 +12,7 @@ class User(db.Model):
     name = db.Column(db.String(144), nullable=False)
     username = db.Column(db.String(144), nullable=False)
     password = db.Column(db.String(144), nullable=False)
-    balance = db.Column(db.Integer, nullable=False)
+    balance = db.Column(db.Float, nullable=False)
 
     purchases = db.relationship("Purchase", backref='account', lazy=True)
 
@@ -20,7 +20,7 @@ class User(db.Model):
         self.name = name
         self.username = username
         self.password = password
-        self.balance = balance
+        self.balance = 0.0
   
     def get_id(self):
         return self.id

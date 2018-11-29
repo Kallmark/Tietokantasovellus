@@ -1,9 +1,10 @@
 from flask import render_template, request, redirect, url_for
-from flask_login import login_user
-
+from flask_login import login_user, login_required, current_user, logout_user
 from application import app
 from application.auth.models import User
 from application.auth.forms import LoginForm
+from application.products.models import Product
+from application.purchases.models import Purchase
 
 @app.route("/auth/login", methods = ["GET", "POST"])
 def auth_login():
@@ -20,7 +21,13 @@ def auth_login():
 
 
     login_user(user)
-    return redirect(url_for("index"))    
+    return redirect(url_for("index"))
+
+@app.route("/auth/profile")
+@login_required
+def profile_look():
+    
+    return render_template("auth/profile.html", user = User.query.filter_by(id = current_user.id).first())
 
 @app.route("/auth/logout")
 def auth_logout():
