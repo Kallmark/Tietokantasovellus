@@ -5,7 +5,7 @@
     <table>
     <select name="purchase" method="GET" action="/">
         {% for product in products %}
-            <option value="{{product}}" SELECTED>{{product}}</option>"
+            <option value="{{product.id}}", SELECTED>{{product.name}}</option>"
         {% endfor %}
     </select>
     <tr>
