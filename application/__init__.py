@@ -26,9 +26,7 @@ from application.auth import views
 
 from application.purchases import models
 from application.purchases import views
-
-#kirjautumistoiminnallisuus 
-
+ 
 # kirjautuminen
 from application.auth.models import User
 from os import urandom
