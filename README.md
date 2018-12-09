@@ -25,8 +25,41 @@ Alustavia toimintoja:
 
 [Käyttötapauksia / user stories](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/stories.md)
 
-## Muita linkkejä
+
+## Käyttöohje
+
+Sovellusta voi käyttää joko herokussa tai lokaalisti. 
 
 Linkki Herokussa olevaan sovellukseen: https://tietokantasovellus-python.herokuapp.com/
+
+Herokussa olevaa sovellusta voi testata testikäyttäjätunnuksella:
+Tunnus: hello
+Salasana: world
+
+Lokaalisti sovellusta voi käyttää lataamalla sovelluksen tiedostot suoraan repositoriosta komennolla:
+
+```
+git clone https://github.com/Kallmark/Tietokantasovellus.git
+```
+
+Ennen sovelluksen käyttöä sinun pitää vielä asentaa virtuaaliympäristö sovelluksen juurikansioon. Tämä onnistuu seuraamalla kommennolla sovelluksen juurikansiossa:
+
+```
+python3 -m venv venv
+```
+Tämän jälkeen virtuaaliympäristön voi käynnistää seuraavalla komennolla sovelluksen juurikansiossa:
+
+```
+source venv/bin/activate
+```
+Virtuaaliympäristössä sovelluksen saa käynnistettyä seuraavalla komennolla sovelluksen juurikansiossa:
+
+```
+python run.py
+```
+
+
+
+
 
 
