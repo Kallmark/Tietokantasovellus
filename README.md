@@ -33,8 +33,9 @@ Sovellusta voi käyttää joko herokussa tai lokaalisti.
 Linkki Herokussa olevaan sovellukseen: https://tietokantasovellus-python.herokuapp.com/
 
 Herokussa olevaa sovellusta voi testata testikäyttäjätunnuksella:
-Tunnus: hello
-Salasana: world
+
+- Tunnus: hello
+- Salasana: world
 
 Lokaalisti sovellusta voi käyttää lataamalla sovelluksen tiedostot suoraan repositoriosta komennolla:
 
