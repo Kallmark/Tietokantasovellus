@@ -11,6 +11,7 @@ class User(Base):
     balance = db.Column(db.Float, nullable=False)
 
     purchases = db.relationship("Purchase", backref='account', lazy=True)
+    roles = db.relationship("Role", backref="role", lazy=True)
 
     def __init__(self, name, username, password):
         self.name = name
@@ -30,5 +31,8 @@ class User(Base):
     def is_authenticated(self):
         return True
     
-    def roles(self):
-        return ["ADMIN"]
+    def get_roles(self):
+        role_names = []
+        for r in self.roles:
+            role_names.append(r.name)
+        return role_names
