@@ -59,6 +59,8 @@ Virtuaaliympäristössä sovelluksen saa käynnistettyä seuraavalla komennolla 
 python run.py
 ```
 
+Sovellus on tämän jälkeen nähtävissä osoitteessa localhost:5000. 
+
 
 
 
