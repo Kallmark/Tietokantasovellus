@@ -44,7 +44,7 @@ def login_required(role="ANY"):
             if role != "ANY":
                 unauthorized = True
                 
-                for user_role in current_user.roles:
+                for user_role in current_user.get_roles():
                     if user_role == role:
                         unauthorized = False
                         break
