@@ -1,22 +1,11 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <table>
-    <tr>
-      <th>User: {{ user.name }}</th>
-    </tr>
-    <tr>
-      <td>User balance: {{ user.balance }}</td>
-    </tr>
-    <tr>
-        <th>User purchase history</th>
-      </tr>
-      {% for purchase in purchases %}
-      <tr>
-        <td>{{ purchase.date_created }}</td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.price }}</td>
-      </tr>
-      {% endfor %}
-  </table>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      User's name: {{ user.name }}
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    User's balance:  {{ user.balance }}
+    </li>
 {% endblock %}

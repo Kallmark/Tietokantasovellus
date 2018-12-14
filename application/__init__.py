@@ -2,6 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 
 from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
 
 import os
 
@@ -13,6 +14,7 @@ else:
 
 
 db = SQLAlchemy(app)
+bootstrap = Bootstrap(app)
 
 # login functionality, part 1
 from application.auth.models import User

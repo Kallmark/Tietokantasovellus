@@ -14,9 +14,9 @@ def purchases_form():
 @login_required
 def purchases_create():
     
-    t = Purchase(account_id = current_user.id, product_id = request.form.get("purchase"))
+    t = Purchase(account_id = current_user.id, product_id = request.form.get("product"))
     purchaser = User.query.filter_by(id = current_user.id).first()
-    purchased_product = Product.query.filter_by(id = request.form.get("purchase")).first()
+    purchased_product = Product.query.filter_by(id = request.form.get("product")).first()
     purchaser.balance = purchaser.balance - purchased_product.price
     purchased_product.amount = purchased_product.amount - 1
 

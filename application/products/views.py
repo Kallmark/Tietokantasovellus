@@ -5,7 +5,7 @@ from application.products.models import Product
 from application.products.forms import ProductForm
 
 @app.route("/products", methods=["GET"])
-@login_required(role="ADMIN")
+@login_required(role="ANY")
 def products_index():
     return render_template("products/list.html", products = Product.query.all())
 
