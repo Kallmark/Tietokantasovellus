@@ -15,4 +15,5 @@
         User's role: {{user.get_highest_role()}}
     </li>
     <a class="btn btn-primary btn-md" href="{{ url_for('profile_edit', id=user.id) }}">Edit profile and password</a>
+    <a class="btn btn-primary btn-md" href="{{ url_for('profile_history', id=user.id) }}">Show purchase history</a>
 {% endblock %}

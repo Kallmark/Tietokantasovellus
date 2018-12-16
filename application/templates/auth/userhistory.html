@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  {% for purchase in purchases %}
+  {% for product in products %}
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Purchase time: {{ purchase.date_created }}
+        <span class="badge badge-primary badge-pill">Product: {{ product.name }}</span>
+        <span class="badge badge-primary badge-pill">Price: {{ product.price }} e</span>   
+    </li>
+  {% endfor %}
+  {% endfor %}
+  <a class="btn btn-primary btn-md" href="{{ url_for('profile_look')}}">Back to profile</a>
+{% endblock %}

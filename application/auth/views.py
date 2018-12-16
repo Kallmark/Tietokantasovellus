@@ -58,14 +58,27 @@ def profile_look():
     
     return render_template("auth/profile.html", user = User.query.filter_by(id = current_user.id).first())
 
-@app.route("/profile/edit/<int:id>", methods = ["GET", "POST"])
+@app.route("/auth/profile/history/<int:id>")
 @login_required("ANY")
-def profile_edit(id):
+def profile_history(id):
 
     user = current_user
+    purchases = user.purchases
+    products = []
+    
+    for purchase in purchases:
+        product = Product.query.get(purchase.product_id)
+        products.append(product)
 
     if current_user.id != id:
         return redirect(url_for('profile_look'))
+    
+    print(products)
+    return render_template("auth/userhistory.html", purchases = purchases, products = products)
+
+@app.route("/profile/edit/<int:id>", methods = ["GET", "POST"])
+@login_required("ANY")
+def profile_edit(id):
 
     #GET
 
