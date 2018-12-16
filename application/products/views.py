@@ -30,3 +30,43 @@ def products_create():
     db.session().commit()
   
     return redirect(url_for("products_index"))
+
+@app.route("/products/edit/<int:id>", methods=["GET","POST"])
+@login_required(role="ADMIN")
+def products_edit(id):
+
+    product = Product.query.get(id)
+
+    #GET
+
+    if request.method == "GET":
+        form = ProductForm(obj = product)
+        return render_template("products/edit.html", form = form, product_id = id)
+
+    #POST
+
+    form = ProductForm(request.form)
+
+    if not form.validate():
+        return render_template("products/new.html", form = form)
+
+    product.name = form.name.data
+    product.amount = form.amount.data
+    product.price = form.price.data
+
+    db.session().commit()
+  
+    return redirect(url_for("products_index"))
+
+@app.route("/products/delete/<int:id>", methods=["GET"])
+@login_required(role="ADMIN")
+def products_delete(id):
+
+    product = Product.query.get(id)
+
+    #GET
+
+    db.session().delete(product)
+    db.session().commit()
+  
+    return redirect(url_for("products_index"))

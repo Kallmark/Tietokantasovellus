@@ -6,6 +6,13 @@
       User's name: {{ user.name }}
     </li>
     <li class="list-group-item d-flex justify-content-between align-items-center">
+        User's userame:  {{ user.username }}
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
     User's balance:  {{ user.balance }}
     </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        User's role: {{user.get_highest_role()}}
+    </li>
+    <a class="btn btn-primary btn-md" href="{{ url_for('profile_edit', id=user.id) }}">Edit profile and password</a>
 {% endblock %}

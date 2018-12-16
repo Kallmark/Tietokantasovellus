@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+
+<form method="POST" action="{{ url_for('products_edit', id=product_id) }}">
+  {{form.hidden_tag()}}
+  {{wtf.form_field(form.name)}}
+  {{wtf.form_field(form.price)}}
+  {{wtf.form_field(form.amount)}}
+  {{wtf.form_field(form.save, class="btn btn-primary btn-md")}}
+</form>
+{% endblock %}

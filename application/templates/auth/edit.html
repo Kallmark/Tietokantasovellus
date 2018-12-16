@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+{{ error }}
+<form method="POST" action="{{ url_for('profile_edit', id=user_id) }}">
+  {{form.hidden_tag()}}
+  {{wtf.form_field(form.name)}}
+  {{wtf.form_field(form.username)}}
+  {{wtf.form_field(form.old_password)}}
+  {{wtf.form_field(form.new_password)}}
+  {{wtf.form_field(form.confirm)}}
+  {{wtf.form_field(form.edit, class="btn btn-primary btn-md")}}
+</form>
+{% endblock %}

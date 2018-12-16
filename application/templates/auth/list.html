@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  {% for user in users %}
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      {{ user.name }}
+      <span class="badge badge-primary badge-pill">{{ user.balance }} e</span>
+      {% if current_user.is_authenticated and "ADMIN" in current_user.get_roles() %}
+      <a class="btn btn-primary btn-md" href="{{ url_for('user_edit', id=user.id) }}">Edit</a>
+      <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#exampleModal">Delete</button>
+      {% endif %}
+    </li>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Confirm delete user</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p>Deleting a user removes all user data.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-primary" href="{{ url_for('users_delete', id=user.id) }}">Delete user</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  {% endfor %}
+{% endblock %}
+

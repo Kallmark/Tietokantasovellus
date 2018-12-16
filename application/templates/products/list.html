@@ -7,6 +7,10 @@
       {{ product.name }}
       <span class="badge badge-primary badge-pill">{{ product.amount }} kpl</span>
       <span class="badge badge-primary badge-pill">{{ product.price }} e</span>
+      {% if current_user.is_authenticated and "ADMIN" in current_user.get_roles() %}
+      <a class="btn btn-primary btn-md" href="{{ url_for('products_edit', id=product.id) }}">Edit</a>
+      <a class="btn btn-primary btn-md" href="{{ url_for('products_delete', id=product.id) }}">Delete</a>
+      {% endif %}
     </li>
   {% endfor %}
 {% endblock %}

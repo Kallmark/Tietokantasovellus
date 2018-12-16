@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+  
+{% block body %}
+{{ error }}
+<form method="POST" action="{{ url_for('user_edit', id=user_id) }}">
+  {{form.hidden_tag()}}
+  {{wtf.form_field(form.balance)}}
+  {{wtf.form_field(form.save, class="btn btn-primary btn-md")}}
+</form>
+{% endblock %}
