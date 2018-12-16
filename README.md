@@ -19,6 +19,8 @@ Statistiikkanäkymässä sivu näyttää listauksen eniten ostetuista tuotteista
 
 [Käyttötapauksia / user stories](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/stories.md)
 
+[Tarkempi käyttöohje](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/k%C3%A4ytt%C3%B6ohje.md)
+
 
 ## Sovelluksen käyttäminen
 
