@@ -83,6 +83,8 @@ def profile_history(id):
 def profile_edit(id):
 
     #GET
+    
+    user = current_user
 
     if request.method == "GET":
         form = EditForm(obj = user)
