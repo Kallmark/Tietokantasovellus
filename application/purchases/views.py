@@ -31,6 +31,7 @@ def purchases_create():
 def purchases_stats():
 
     products = Purchase.most_purchased_products()
+    print(products)
     users = Purchase.top_five_customers()
 
     return render_template("purchases/stats.html", products = products, users = users)
