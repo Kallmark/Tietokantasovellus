@@ -63,6 +63,10 @@ def products_edit(id):
 def products_delete(id):
 
     product = Product.query.get(id)
+    purchases = product.purchases
+
+    for purchase in purchases:
+        db.session.delete(purchase)
 
     #GET
 

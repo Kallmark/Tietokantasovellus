@@ -13,7 +13,6 @@ def auth_login():
         return render_template("auth/loginform.html", form = LoginForm())
 
     form = LoginForm(request.form)
-    # mahdolliset validoinnit
 
     user = User.query.filter_by(username=form.username.data, password=form.password.data).first()
     if not user:
@@ -52,12 +51,14 @@ def auth_register():
 
     return redirect(url_for("index"))
 
+#for user to view profile
 @app.route("/auth/profile")
 @login_required("ANY")
 def profile_look():
     
     return render_template("auth/profile.html", user = User.query.filter_by(id = current_user.id).first())
 
+#for user to view purchase history
 @app.route("/auth/profile/history/<int:id>")
 @login_required("ANY")
 def profile_history(id):
@@ -76,6 +77,7 @@ def profile_history(id):
     print(products)
     return render_template("auth/userhistory.html", purchases = purchases, products = products)
 
+#for user to edit profile information and password
 @app.route("/profile/edit/<int:id>", methods = ["GET", "POST"])
 @login_required("ANY")
 def profile_edit(id):
@@ -104,11 +106,13 @@ def profile_edit(id):
   
     return redirect(url_for("profile_look"))
 
+#for admin to view all users
 @app.route("/users", methods=["GET"])
 @login_required(role="ADMIN")
 def users_list():
     return render_template("auth/list.html", users = User.query.all())
 
+#for admin to edit user's balance
 @app.route("/users/edit/<int:id>", methods=["GET","POST"])
 @login_required(role="ADMIN")
 def user_edit(id):

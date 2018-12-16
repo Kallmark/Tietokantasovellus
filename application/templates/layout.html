@@ -32,6 +32,9 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('purchases_form') }} ">Purchase a product</a>
                   </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ url_for('purchases_stats') }} ">Statistics</a>
+                    </li>
                 </ul>
                 <div class="form-inline mt-2 mt-md-0">
             {% if current_user.is_authenticated %}

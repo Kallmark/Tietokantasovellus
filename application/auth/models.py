@@ -42,3 +42,4 @@ class User(Base):
         for r in self.roles:
             role_names.append(r.name)
         return role_names[0]
+    

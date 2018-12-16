@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <h5 class="mb-1">Top five users</h5>
+  {% for user in users %}
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      {{ user.name }}
+      <span class="badge badge-primary badge-pill">Purchased products: {{ user.amount }} </span>
+    </li>
+  {% endfor %}
+  <h5 class="mb-1">Most popular products</h5>
+  {% for product in products %}
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      {{ product.name }}
+      <span class="badge badge-primary badge-pill">Purchased items: {{ product.amount }} </span>
+    </li>
+  {% endfor %}
+{% endblock %}

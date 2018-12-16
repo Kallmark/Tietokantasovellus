@@ -13,3 +13,4 @@ class Product(Base):
         self.name = name
         self.price = price
         self.amount = amount
+
