@@ -11,6 +11,7 @@
 
 ## Tietokannan käyttäjä
 
+- Tietokannan käyttäjä voi rekisteröidä itselleen tunnuksen. TOTEUTETTU
 - Tietokannan käyttäjä voi kirjautua sisään. TOTEUTETTU
 - Tietokannan käyttäjä voi merkitä tuotteita "ostetuksi." TOTEUTETTU
     - Käyttäjän tekemä ostos kasvattaa käyttäjän saldoa (miinustaa saldoa) ja vähentää varastossa olevan tuotteen määrää.
