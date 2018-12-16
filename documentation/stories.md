@@ -23,6 +23,6 @@
  ## Tulevaisuuden laajennusmahdollisuuksia
  
  - Sovellukseen voidaan lisätä myös muita statistiikkoja.
-    -Esimerkiksi viimeisen kahden tunnin aikana eniten tuotteita ostaneet henkilöt.
+    - Esimerkiksi viimeisen kahden tunnin aikana eniten tuotteita ostaneet henkilöt.
  - Sovelluksen ulkoasuun voitaisiin implementoida esimerkiksi kuvia jokaisen tuotteen kohdalle. 
  - Tuotteita voisi tarvittaessa ostaa usean kerrallaan. Tämä jätettiin toistaiseksi kuitenkin tarkoituksella tekemättä.
