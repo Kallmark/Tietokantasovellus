@@ -26,7 +26,7 @@ Statistiikkanäkymässä sivu näyttää listauksen eniten ostetuista tuotteista
 
 ### Heroku
 
-Linkki Herokussa olevaan sovellukseen: https://tietokantasovellus-python.herokuapp.com/
+[Linkki Herokussa olevaan sovellukseen](https://tietokantasovellus-python.herokuapp.com/)
 
 Herokussa olevaa sovellusta voi testata admin-oikeudet omaavalla testikäyttäjätunnuksella:
 
