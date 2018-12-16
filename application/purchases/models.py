@@ -10,7 +10,7 @@ class Purchase(Base):
                            nullable=False)
     @staticmethod
     def most_purchased_products():
-        stmt = text("SELECT COUNT(purchase.product_id), name"
+        stmt = text("SELECT COUNT(purchase.product_id), product.name"
                 " FROM purchase"
                 " INNER JOIN product on product_id = purchase.product_id"
                 " GROUP BY purchase.product_id")
@@ -24,7 +24,7 @@ class Purchase(Base):
 
     @staticmethod
     def top_five_customers():
-        stmt = text("SELECT COUNT(purchase.account_id), name"
+        stmt = text("SELECT COUNT(purchase.account_id), account.name"
                 " FROM purchase"
                 " INNER JOIN account on account_id = purchase.account_id"
                 " GROUP BY purchase.account_id"

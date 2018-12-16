@@ -25,14 +25,13 @@ def purchases_create():
 
     return redirect(url_for("purchases_form"))
 
+#statistics for all users. shows most purchased products and top three users by purchase count. 
 @app.route("/statistics", methods=["GET"])
 @login_required(role="ANY")
 def purchases_stats():
 
     products = Purchase.most_purchased_products()
     users = Purchase.top_five_customers()
-    print(products)
-    print(users[0])
 
     return render_template("purchases/stats.html", products = products, users = users)
 
