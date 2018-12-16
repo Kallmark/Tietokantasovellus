@@ -2,40 +2,38 @@
 
 ## Aihekuvaus 
 
-Sovellus on eräänlainen dirnkkitietokanta, jonka aihe on muokattu aiheesta Drinkkiarkisto. Sovellus rakentuu tietokantaan tallennettavien käyttäjien ja juomien päälle. Käyttäjät voivat merkitä itselleen eri juomia. Merkitessään itselleen jonkin tietyn juoman, sovellus tallentaa tästä merkinnän tietokantaan. Näin ollen sovellus kerää dataa käyttäjien itselleen merkitsemistä juomista.
+Sovellus on eräänlainen virvoikekauppa, jonka aihe on muokattu aiheesta Drinkkiarkisto. Sovellus rakentuu tietokantaan tallennettavien käyttäjien ja tavaroiden päälle. Käyttäjät voivat merkitsemällä ostaa itselleen eri tavaroita. Merkitessään itselleen jonkin tietyn tavaran, sovellus tallentaa tästä merkinnän tietokantaan. Samalla sivu vähentää käyttäjän saldosta tuotteen hinnan ja päivittää tuotteen määrää tietokannasssa. Tallentamalla erikseen jokaisen ostotapahtuman sovellus kerää dataa myös käyttäjien ostoskäyttäytymisestä.
 
-Sovelluksessa on määrä olla admin-käyttäjä, joka pystyy tarkastelemaan kättäjälistoja, juomalistoja sekä tilastoja merkityistä juomista. Järjestelmän on mahdollista tuottaa ajantasoisia listoja käyttäjistä, juomista ja merkintätilastoista. Järjestelmään kirjaudutaan sisään ja tavallisen käyttäjän oikeudet ovat admin-käyttäjää rajoitetumpia. Admin käyttäjän tulee hyväksyä uudet käyttäjät ja juomat sovellukseen. Admin käyttäjä voi antaa laajennettuja oikeuksia muille käyttäjille. 
+Tavallisten käyttäjien on mahdollista tarkastella tuotelistaa, tehdä ostoksia, tarkastella sovelluksen statistiikkaa ja tarvittaessa muokata omia tietojaan. 
 
-Alustavia toimintoja:
+Sovelluksessa on admin-käyttäjä, joka käyttäjätoiminnallisuuksian lisäksi pystyy tarkastelemaan kättäjälistoja, muokkaamaan käyttäjien saldoa, poistamaan käyttäjätunnuksia, ja poistamaan sekä muokkaamaan tuotteita. 
 
-- Kirjautuminen
-- Juomien haku
-- Juomien selailu
-- Juoman merkitseminen käyttäjälle
-- Juoman lisääminen tietokantaan
-- Juomien sisäänluku tiedostosta
-- Käyttäjätunnuksen luominen
-- Käyttäjätietojen muutos ja tilin poisto
+Statistiikkanäkymässä sivu näyttää listauksen eniten ostetuista tuotteista ja eniten tuotteita ostaneista käyttäjistä.
+
 
 ## Dokumentaatiota
 
 [Työaikakirjanpito](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/ty%C3%B6aikakirjanpito.md)
 
-[Arkkitehtuurkuvaus(tietokanta)](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/arkkitehtuurikuvaus.md)
+[Tietokantakuvaus](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/arkkitehtuurikuvaus.md)
 
 [Käyttötapauksia / user stories](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/stories.md)
 
 
-## Käyttöohje
+## Sovelluksen käyttäminen
 
-Sovellusta voi käyttää joko herokussa tai lokaalisti. 
+### Heroku
 
 Linkki Herokussa olevaan sovellukseen: https://tietokantasovellus-python.herokuapp.com/
 
-Herokussa olevaa sovellusta voi testata testikäyttäjätunnuksella:
+Herokussa olevaa sovellusta voi testata admin-oikeudet omaavalla testikäyttäjätunnuksella:
 
 - Tunnus: hello
 - Salasana: world
+
+Käyttäjän on mahdollisuutta käyttää sovellusta myös rekisteröitymällä sinne itse. 
+
+### Lokaali sovellus
 
 Lokaalisti sovellusta voi käyttää lataamalla sovelluksen tiedostot suoraan repositoriosta komennolla:
 
