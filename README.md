@@ -15,7 +15,7 @@ Statistiikkanäkymässä sivu näyttää listauksen eniten ostetuista tuotteista
 
 [Työaikakirjanpito](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/ty%C3%B6aikakirjanpito.md)
 
-[Tietokantakuvaus](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/arkkitehtuurikuvaus.md)
+[Tietokantakuvaus](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/tietokantakuvaus.md)
 
 [Käyttötapauksia / user stories](https://github.com/Kallmark/Tietokantasovellus/blob/master/documentation/stories.md)
 
